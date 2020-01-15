@@ -1,7 +1,7 @@
 package com.example.todo
 
 // global variable to store all todos
-
+/*
 val toDoRepository = toDoRepository().apply {
 
     addToDo("Feed the pets", "Give the cat a fish and the dog a cat.")
@@ -37,4 +37,4 @@ class toDoRepository{
     }
 }
 
-
+*/
