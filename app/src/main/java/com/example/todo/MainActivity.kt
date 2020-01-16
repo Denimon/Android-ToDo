@@ -1,7 +1,9 @@
 package com.example.todo
 
+import android.app.SearchManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
 
@@ -12,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val listView = this.findViewById<ListView>(R.id.list_view)
+
+
         listView.adapter = ArrayAdapter<ToDo>(
             this,
             android.R.layout.simple_list_item_1,
@@ -19,7 +23,12 @@ class MainActivity : AppCompatActivity() {
             toDoRepository.getAllToDos()
         )
 
+        listView.setOnClickListener(View.OnClickListener() {
+
+            override public void onItemClick(){
+
+            }
+        })
+
     }
-
-
 }
