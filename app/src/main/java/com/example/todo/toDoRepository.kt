@@ -1,15 +1,15 @@
 package com.example.todo
 
 // global variable to store all todos
-/*
-val toDoRepository = toDoRepository().apply {
+
+val toDoRepository = ToDoRepository().apply {
 
     addToDo("Feed the pets", "Give the cat a fish and the dog a cat.")
-    addToDo("Excersise", "Take a walk and listen to music.")
+    addToDo("Excercise", "Take a walk and listen to music.")
 }
 
 
-class toDoRepository{
+class ToDoRepository{
 
     private val toDos = mutableListOf<ToDo>()
 
@@ -37,4 +37,3 @@ class toDoRepository{
     }
 }
 
-*/
