@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listView = this.findViewById<ListView>(R.id.list_view)
+        val listView = this.findViewById<ListView>(R.id.todo_list_view)
+        val button = this.findViewById<Button>(R.id.create_button)
+
+
+        button.setOnClickListener {
+            val intent = Intent(this,CreateToDoActivity::class.java)
+            startActivity(intent)
+        }
 
 
         listView.adapter = ArrayAdapter<ToDo>(
@@ -27,14 +35,21 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-        listView.setOnItemClickListener { parent, _, position, id ->
+        listView.setOnItemClickListener { parent, _, position, _ ->
             val element = parent.getItemAtPosition(position)
-            println(element)
 
-            //val intent = Intent(this,CreateToDoActivity::class.java)
+
+            val todo = toDoRepository.getToDoById(position+1)
+
             val intent = Intent(this, ViewToDoActivity::class.java)
+            println(todo?.id)
+
+            intent.putExtra("content", todo?.content)
+            intent.putExtra("title", todo?.title)
+            intent.putExtra("id", todo?.id)
             startActivity(intent)
         }
+
 
 
 
