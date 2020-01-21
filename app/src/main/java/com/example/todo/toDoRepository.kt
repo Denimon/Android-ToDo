@@ -13,10 +13,9 @@ class ToDoRepository{
 
     private val toDos = mutableListOf<ToDo>()
 
-
     fun addToDo(title: String, content: String): Int {
         val id = when {
-            toDos.count() == 0 -> 1
+            toDos.count() == 0 -> 13 //1
             else -> toDos.last().id+1
         }
         toDos.add(ToDo(id,title,content))

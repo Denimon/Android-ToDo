@@ -1,3 +1,28 @@
 <resources>
+
+
+
     <string name="app_name">ToDo</string>
+    <string name="main_text">Todo app</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="createTodo">Create a new todo</string>
+    <string name="updateTodo">Update todo</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+
+
+    <string name="titleError">Title must be min 3 and max 15 character</string>
+    <string name="descriptionError">Description must be min 3 and max 50 characters</string>
+    <string name="idError">No valid Todo object</string>
+
+    <string name="deleteToDo">Delete todo</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="validateDelete">Do you really want to delete it?</string>
+
+
+
 </resources>

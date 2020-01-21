@@ -9,6 +9,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import androidx.core.view.get
+import kotlinx.android.synthetic.main.activity_updatetodo.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,27 +35,22 @@ class MainActivity : AppCompatActivity() {
 
         val listView = this.findViewById<ListView>(R.id.todo_list_view)
 
+
         listView.adapter = ArrayAdapter<ToDo>(
             this,
             android.R.layout.simple_list_item_1,
             android.R.id.text1,
             toDoRepository.getAllToDos()
-
         )
 
 
         listView.setOnItemClickListener { parent, _, position, _ ->
-            //val element = parent.getItemAtPosition(position)
 
-
-            val todo = toDoRepository.getToDoById(position+1)
+            val klickedTodo = parent.getItemAtPosition(position) as ToDo
 
             val intent = Intent(this, ViewToDoActivity::class.java)
-            println(todo?.id)
 
-            intent.putExtra("content", todo?.content)
-            intent.putExtra("title", todo?.title)
-            intent.putExtra("id", todo?.id)
+            intent.putExtra("id",klickedTodo.id)
             startActivity(intent)
         }
     }

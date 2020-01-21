@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="create">Skapa</string>
+    <string name="createTodo">Skapa ny todo</string>
+    <string name="delete">Ta bort</string>
+    <string name="deleteToDo">Ta bort todo</string>
+    <string name="description">Beskrivning</string>
+    <string name="descriptionError">Beskrivningen måste vara mellan 3 och 50 tecken</string>
+    <string name="idError">Hittade inget Todo</string>
+    <string name="main_text">Todo app</string>
+    <string name="no">Nej</string>
+    <string name="save">Spara</string>
+    <string name="title">Titel</string>
+    <string name="titleError">Titeln måste vara mellan 3 och 15 tecken långt</string>
+    <string name="update">Uppdatera</string>
+    <string name="updateTodo">Uppdatera todo</string>
+    <string name="validateDelete">Vill du verkligen ta bort ?</string>
+    <string name="yes">Ja</string>
+</resources>

@@ -3,11 +3,17 @@ package com.example.todo
 
 
 import android.app.SearchManager
+import android.content.ClipDescription
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+
+
+public fun validateTitleInput(title: String) = (title.length > 3 && title.length < 16)
+
+public fun validateDescriptionInput(description: String) = (description.length > 3 && description.length < 51)
 
 class CreateToDoActivity: AppCompatActivity() {
 
@@ -21,17 +27,29 @@ class CreateToDoActivity: AppCompatActivity() {
 
         createButton.setOnClickListener {
 
+
+
             val title = titleInput.editableText.toString()
             val description = descriptionInput.editableText.toString()
 
-            toDoRepository.addToDo(title,description)
-            val intent = Intent(this, ViewToDoActivity::class.java)
+            if (validateTitleInput(title) && validateDescriptionInput(description)) {
 
-            intent.putExtra("content", description)
-            intent.putExtra("title", title)
-            startActivity(intent)
-            finish()
+                val newTodoId = toDoRepository.addToDo(title,description)
+                val intent = Intent(this, ViewToDoActivity::class.java)
 
+                intent.putExtra("id",newTodoId)
+                startActivity(intent)
+                finish()
+            }
+            else{
+
+                if(title.length < 3 || title.length > 15){
+                    titleInput.setError(getString(R.string.titleError))
+                }
+                if(description.length <3 || description.length > 50){
+                    descriptionInput.setError(getString(R.string.descriptionError))
+                }
+            }
         }
     }
 }
