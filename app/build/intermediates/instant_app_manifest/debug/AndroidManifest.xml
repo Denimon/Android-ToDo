@@ -28,6 +28,7 @@
         </activity>
         <activity android:name="com.example.todo.ViewToDoActivity" />
         <activity android:name="com.example.todo.CreateToDoActivity" />
+        <activity android:name="com.example.todo.UpdateToDoActivity" />
     </application>
 
 </manifest>

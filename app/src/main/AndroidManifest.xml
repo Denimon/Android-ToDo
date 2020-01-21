@@ -21,6 +21,8 @@
 
         <activity android:name=".CreateToDoActivity"></activity>
 
+        <activity android:name=".UpdateToDoActivity"></activity>
+
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@
 9-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:5:5-24:19
+11-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
 12-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -48,6 +48,9 @@
 29        <activity android:name="com.example.todo.CreateToDoActivity" />
 29-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:22:9-65
 29-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:22:19-53
-30    </application>
-31
-32</manifest>
+30        <activity android:name="com.example.todo.UpdateToDoActivity" />
+30-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:24:9-65
+30-->/Users/denimon/Denimon/ToDo/Android-ToDo/app/src/main/AndroidManifest.xml:24:19-53
+31    </application>
+32
+33</manifest>
