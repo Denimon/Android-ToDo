@@ -28,6 +28,8 @@ class ViewToDoActivity: AppCompatActivity() {
 
         if (id == -1){
             titleTextField.setText(getString(R.string.idError))
+            updateButton.isClickable = false
+            deleteButton.isClickable = false
             //startActivity(Intent(this, MainActivity::class.java))
             //disable buttons?
 
@@ -58,6 +60,7 @@ class ViewToDoActivity: AppCompatActivity() {
 
                     toDoRepository.deleteToDoById(id)
                     startActivity(Intent(this, MainActivity::class.java))
+                    finish()
 
                 }.setNegativeButton(
                     getString(R.string.no)

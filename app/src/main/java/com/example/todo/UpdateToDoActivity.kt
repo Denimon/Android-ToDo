@@ -18,15 +18,16 @@ class UpdateToDoActivity : AppCompatActivity(){
         val titleInput = this.findViewById<EditText>(R.id.title_input_edit_text)
 
         val id = intent.getIntExtra("id",-1)
-        val toDo = toDoRepository.getToDoById(id)
+
 
         if(id == -1){
 
             //error
-
+            println("id error")
         }
         else{
 
+            val toDo = toDoRepository.getToDoById(id)
             descriptionInput.setText(toDo?.content)
             titleInput.setText(toDo?.title)
         }
@@ -43,6 +44,7 @@ class UpdateToDoActivity : AppCompatActivity(){
                 val intent = Intent(this, ViewToDoActivity::class.java)
                 intent.putExtra("id",id)
                 startActivity(intent)
+                finish()
 
             }
             else{

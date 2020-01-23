@@ -27,8 +27,6 @@ class CreateToDoActivity: AppCompatActivity() {
 
         createButton.setOnClickListener {
 
-
-
             val title = titleInput.editableText.toString()
             val description = descriptionInput.editableText.toString()
 
@@ -46,7 +44,7 @@ class CreateToDoActivity: AppCompatActivity() {
                 if(title.length < 3 || title.length > 15){
                     titleInput.setError(getString(R.string.titleError))
                 }
-                if(description.length <3 || description.length > 50){
+                if(description.length < 3 || description.length > 50){
                     descriptionInput.setError(getString(R.string.descriptionError))
                 }
             }

@@ -14,8 +14,8 @@
     <string name="update">Update</string>
 
 
-    <string name="titleError">Title must be min 3 and max 15 character</string>
-    <string name="descriptionError">Description must be min 3 and max 50 characters</string>
+    <string name="titleError">Title must be between 3 and 15 characters long</string>
+    <string name="descriptionError">Description must be between 3 and 50 characters long</string>
     <string name="idError">No valid Todo object</string>
 
     <string name="deleteToDo">Delete todo</string>
